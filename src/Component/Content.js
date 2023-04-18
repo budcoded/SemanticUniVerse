@@ -17,7 +17,8 @@ function Content({ option }) {
           SELECT DISTINCT ?course 
           WHERE {
             ?course table:Enrolled_By ?object .
-             FILTER(regex(str(?object), "${option}", "i")) 
+            ?object table:Admitted_By ?univ .
+             FILTER(regex(str(?univ), "${option}", "i")) 
           }`
         }
       });
@@ -38,7 +39,7 @@ function Content({ option }) {
         headers: {},
         params: {
           query: `PREFIX table: <http://www.semanticweb.org/budcoded/ontologies/university/all#>
-          SELECT DISTINCT ?student 
+          SELECT DISTINCT ?student
           WHERE {
             ?student table:Admitted_By ?object .
              FILTER(regex(str(?object), "${option}", "i")) 

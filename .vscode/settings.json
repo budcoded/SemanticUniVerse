@@ -1,0 +1,4 @@
+{
+    "editor.fontFamily": "'ubuntu mono', 'Droid Sans Mono', 'monospace', monospace",
+    "files.autoSave": "onFocusChange"
+}

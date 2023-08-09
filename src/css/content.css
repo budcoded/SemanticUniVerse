@@ -48,28 +48,4 @@ h3 {
     background-color: #fff;
     font-size: 16px;
     font-family: 'ubuntu mono';
-    /* appearance: none; */
   }
-  
-  /*.dropdown select:focus {
-    outline: none;
-    border-color: #0070f3;
-    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.5);
-  }
-  
-  .dropdown::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    margin-top: -3px;
-    border-width: 6px 6px 0 6px;
-    border-style: solid;
-    border-color: #333 transparent;
-    pointer-events: none;
-  }
-  
-  .dropdown:hover::before {
-    border-top-color: #0070f3;
-  } */
-  

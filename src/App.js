@@ -8,7 +8,7 @@ function App() {
   const [selectedOption, setSelectedOption] = useState('');
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.post('http://localhost:3030/university_combined/query',null, {
+      const response = await axios.post('http://localhost:3030/semantic_universe/query',null, {
         headers: {},
         params: {query: `PREFIX table: <http://www.semanticweb.org/budcoded/ontologies/university/all#>
         SELECT DISTINCT ?subject  WHERE { ?subject table:Hires ?object .}`}

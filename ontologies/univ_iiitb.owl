@@ -1,0 +1,1233 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/budcoded/ontologies/university/iiitb"
+     xml:base="http://www.semanticweb.org/budcoded/ontologies/university/iiitb"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:iiitb="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#admits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#admits">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#admittedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#admittedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#admittedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#enrolledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#enrolledBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#enrolls"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#enrolls -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#enrolls">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#hiredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#hiredBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#hires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#hires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#hires">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#taughtBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#taughtBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#teaches"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#cgpa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#cgpa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#contact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#contact">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#credits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#credits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#imtech"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#mtech"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#imtech"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#mtech"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#imtech"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#mtech"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#imtech"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#mtech"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#imtech"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#mtech"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#people"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#imtech -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#imtech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#programme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#mtech -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#mtech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#programme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#people -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#people">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#programme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#programme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#people"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aakanksha_Rani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aakanksha_Rani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#HealthCare_Application_Development"/>
+        <iiitb:id>MT2022001</iiitb:id>
+        <iiitb:name>Aakanksha Rani</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aakash_Gadekar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aakash_Gadekar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Algorithms"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Compilers"/>
+        <iiitb:id>MT2022002</iiitb:id>
+        <iiitb:name>Aakash Gadekar</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhi_Jain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhi_Jain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Cyber_Security"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Data_Modeling"/>
+        <iiitb:id>IMT2019501</iiitb:id>
+        <iiitb:name>Abhi Jain</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhinav_H_Kamath -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhinav_H_Kamath">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Enterprise_Software_Development"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Few-Shot_Learning"/>
+        <iiitb:id>IMT2019001</iiitb:id>
+        <iiitb:name>Abhinav H Kamath</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhirup_Chakraborty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhirup_Chakraborty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Foundations_of_AI"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Geographic_Information_Systems"/>
+        <iiitb:id>MT2022003</iiitb:id>
+        <iiitb:name>Abhirup Chakraborty</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhisek_Mishra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhisek_Mishra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Machine_Learning"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Maths_for_Machine_Learning"/>
+        <iiitb:id>MT2022004</iiitb:id>
+        <iiitb:name>Abhisek Mishra</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aditya_Kaka -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aditya_Kaka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Multi-Agent_Systems"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Natural_Language_Processing"/>
+        <iiitb:id>IMT2019002</iiitb:id>
+        <iiitb:name>Aditya Kaka</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aditya_Vardhan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aditya_Vardhan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#NoSQL"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Recommendation_Systems"/>
+        <iiitb:id>IMT2019003</iiitb:id>
+        <iiitb:name>Aditya Vardhan</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Adrij_Sharma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Adrij_Sharma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Reinforcement_Learning"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Production_Engineering"/>
+        <iiitb:id>IMT2019004</iiitb:id>
+        <iiitb:name>Adrij Sharma</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Adwait_Upadhyay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Adwait_Upadhyay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Systems"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Visual_Recognition"/>
+        <iiitb:id>MT2022006</iiitb:id>
+        <iiitb:name>Adwait Upadhyay</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ajay_Chhajed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ajay_Chhajed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#NoSQL"/>
+        <iiitb:id>IMT2019006</iiitb:id>
+        <iiitb:name>Ajay Chhajed</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ajay_Kumar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ajay_Kumar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Data_Modeling"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Production_Engineering"/>
+        <iiitb:id>MT2022007</iiitb:id>
+        <iiitb:name>Ajay Kumar</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akash_Anand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akash_Anand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Recommendation_Systems"/>
+        <iiitb:id>MT2022009</iiitb:id>
+        <iiitb:name>Akash Anand</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akshat_Karodiya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akshat_Karodiya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#VLSI_Architecture_Design"/>
+        <iiitb:id>MT2022011</iiitb:id>
+        <iiitb:name>Akshat Karodiya</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akshay_Takrani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akshay_Takrani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed_Signal_Design_of_ASICs"/>
+        <iiitb:id>MT2022012</iiitb:id>
+        <iiitb:name>Akshay Takrani</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Algorithms -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Algorithms">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS006</iiitb:id>
+        <iiitb:name>Advance Algorithms</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aman_Kumar_Verma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aman_Kumar_Verma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed-Signal_Embedded_Systems_Design"/>
+        <iiitb:id>MT2022146</iiitb:id>
+        <iiitb:name>Aman Kumar Verma</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amey_Mahesh_Tendulkar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amey_Mahesh_Tendulkar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Functional_Verification_of_SOCs"/>
+        <iiitb:id>MT2022014</iiitb:id>
+        <iiitb:name>Amey Mahesh Tendulkar</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amit_Chattopadhyay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amit_Chattopadhyay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Functional_Verification_of_SOCs"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#VLSI_Architecture_Design"/>
+        <iiitb:id>FC01</iiitb:id>
+        <iiitb:name>Amit Chattopadhyay</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amit_Prakash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amit_Prakash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Introduction_to_Nonlinear_Dynamical_Systems"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed-Signal_Embedded_Systems_Design"/>
+        <iiitb:id>FC02</iiitb:id>
+        <iiitb:name>Amit Prakash</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amrita_Mishra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amrita_Mishra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed_Signal_Design_of_ASICs"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#VLSI_Architecture_Design"/>
+        <iiitb:id>FC03</iiitb:id>
+        <iiitb:name>Amrita Mishra</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Anick_Bhattacharya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Anick_Bhattacharya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#High_Level_Synthesis_and_Optimization_of_Digital_Circuits"/>
+        <iiitb:id>MT2022168</iiitb:id>
+        <iiitb:name>Anick Bhattacharya</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Anirudh_Gupta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Anirudh_Gupta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Introduction_to_Nonlinear_Dynamical_Systems"/>
+        <iiitb:id>IMT2019008</iiitb:id>
+        <iiitb:name>Anirudh Gupta</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Anish_Sai_Potluri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Anish_Sai_Potluri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Functional_Verification_of_SOCs"/>
+        <iiitb:id>IMT2019009</iiitb:id>
+        <iiitb:name>Anish Sai Potluri</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ashish_Choudhury -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ashish_Choudhury">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Functional_Verification_of_SOCs"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#High_Level_Synthesis_and_Optimization_of_Digital_Circuits"/>
+        <iiitb:id>FC04</iiitb:id>
+        <iiitb:name>Ashish Choudhury</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ashutosh_Abhijit_Gajare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ashutosh_Abhijit_Gajare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed-Signal_Embedded_Systems_Design"/>
+        <iiitb:id>MT2022025</iiitb:id>
+        <iiitb:name>Ashutosh Abhijit Gajare</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aswatha_Narayanan_S -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aswatha_Narayanan_S">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#student"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#HealthCare_Application_Development"/>
+        <iiitb:enrolls rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#VLSI_Architecture_Design"/>
+        <iiitb:id>MT2022026</iiitb:id>
+        <iiitb:name>Aswatha Narayanan S</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Badrinath_Ramamurthy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Badrinath_Ramamurthy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Reinforcement_Learning"/>
+        <iiitb:id>FC05</iiitb:id>
+        <iiitb:name>Badrinath Ramamurthy</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Balaji_Parthasarathy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Balaji_Parthasarathy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Foundations_of_AI"/>
+        <iiitb:id>FC06</iiitb:id>
+        <iiitb:name>Balaji Parthasarathy</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Balakrishnan_Ashok -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Balakrishnan_Ashok">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Systems"/>
+        <iiitb:id>FC07</iiitb:id>
+        <iiitb:name>Balakrishnan Ashok</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Bidisha_Chaudhuri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Bidisha_Chaudhuri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Geographic_Information_Systems"/>
+        <iiitb:id>FC08</iiitb:id>
+        <iiitb:name>Bidisha Chaudhuri</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Chandrashekar_Ramanathan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Chandrashekar_Ramanathan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Data_Modeling"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Visual_Recognition"/>
+        <iiitb:id>FC09</iiitb:id>
+        <iiitb:name>Chandrashekar Ramanathan</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Compilers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Compilers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS013</iiitb:id>
+        <iiitb:name>Compilers</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Cyber_Security -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Cyber_Security">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS009</iiitb:id>
+        <iiitb:name>Cyber Security Fundamentals</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Data_Modeling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Data_Modeling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS001</iiitb:id>
+        <iiitb:name>Data Modeling</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Debabrata_Das -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Debabrata_Das">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Natural_Language_Processing"/>
+        <iiitb:id>FC10</iiitb:id>
+        <iiitb:name>Debabrata Das</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Dinesh_Babu_Jayagopi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Dinesh_Babu_Jayagopi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Machine_Learning"/>
+        <iiitb:id>FC11</iiitb:id>
+        <iiitb:name>Dinesh Babu Jayagopi</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Enterprise_Software_Development -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Enterprise_Software_Development">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</iiitb:credits>
+        <iiitb:id>CS002</iiitb:id>
+        <iiitb:name>Enterprise Software Development</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Few-Shot_Learning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Few-Shot_Learning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS008</iiitb:id>
+        <iiitb:name>Few-Shot Learning</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Foundations_of_AI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Foundations_of_AI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>AI 551</iiitb:id>
+        <iiitb:name>Foundations of AI</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Functional_Verification_of_SOCs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Functional_Verification_of_SOCs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>VL 701</iiitb:id>
+        <iiitb:name>Functional Verification of SOCs</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#G_N_Srinivasa_Prasanna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#G_N_Srinivasa_Prasanna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Data_Modeling"/>
+        <iiitb:id>FC12</iiitb:id>
+        <iiitb:name>G N Srinivasa Prasanna</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#G_R_Sinha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#G_R_Sinha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#High_Level_Synthesis_and_Optimization_of_Digital_Circuits"/>
+        <iiitb:id>FC13</iiitb:id>
+        <iiitb:name>G R Sinha</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Geographic_Information_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Geographic_Information_Systems">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>AI 703</iiitb:id>
+        <iiitb:name>Geographic Information Systems</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Haragopal_Mangipudi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Haragopal_Mangipudi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Functional_Verification_of_SOCs"/>
+        <iiitb:id>FC14</iiitb:id>
+        <iiitb:name>Haragopal Mangipudi</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Harish_Ramani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Harish_Ramani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Cyber_Security"/>
+        <iiitb:id>FC15</iiitb:id>
+        <iiitb:name>Harish Ramani</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#HealthCare_Application_Development -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#HealthCare_Application_Development">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS011</iiitb:id>
+        <iiitb:name>HealthCare Application Development</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#High_Level_Synthesis_and_Optimization_of_Digital_Circuits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#High_Level_Synthesis_and_Optimization_of_Digital_Circuits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>VL 602</iiitb:id>
+        <iiitb:name>High Level Synthesis and Optimization of Digital Circuits</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#IIIT_Bangalore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#IIIT_Bangalore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#university"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aakanksha_Rani"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aakash_Gadekar"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhi_Jain"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhinav_H_Kamath"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhirup_Chakraborty"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Abhisek_Mishra"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aditya_Kaka"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aditya_Vardhan"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Adrij_Sharma"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Adwait_Upadhyay"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ajay_Chhajed"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ajay_Kumar"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akash_Anand"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akshat_Karodiya"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Akshay_Takrani"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Aman_Kumar_Verma"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amey_Mahesh_Tendulkar"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Anick_Bhattacharya"/>
+        <iiitb:admits rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Anirudh_Gupta"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amit_Chattopadhyay"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amit_Prakash"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Amrita_Mishra"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Ashish_Choudhury"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Badrinath_Ramamurthy"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Balaji_Parthasarathy"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Balakrishnan_Ashok"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Bidisha_Chaudhuri"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Chandrashekar_Ramanathan"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Debabrata_Das"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Dinesh_Babu_Jayagopi"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#G_N_Srinivasa_Prasanna"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#G_R_Sinha"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Haragopal_Mangipudi"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Harish_Ramani"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Karthikeyan_Vaidyanathan"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Kurian_Polachan"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Madhav_Rao"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Manikandan_R_R"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Raghuram_Bharadwaj"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Shrisha_Rao"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Srinath_Srinivasa"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Subir_Kumar_Roy"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Sujit_Kumar_Chakrabarti"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#T_K_Srikanth"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Uttam_Kumar"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#V_N_Muralidhara"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Vinu_E_Venugopal"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Viswanath_Gopalakrishnan"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Vivek_Yadav"/>
+        <iiitb:hires rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Meenakshi_D&apos;Souza"/>
+        <iiitb:address>26/C, Hosur Rd, Electronics City Phase 1, Electronic City, Bengaluru, Karnataka 560100</iiitb:address>
+        <iiitb:contact>08041407777</iiitb:contact>
+        <iiitb:name>International Institute of Information Technology, Bangalore</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Introduction_to_Nonlinear_Dynamical_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Introduction_to_Nonlinear_Dynamical_Systems">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>SM 602</iiitb:id>
+        <iiitb:name>Introduction to Nonlinear Dynamical Systems</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Karthikeyan_Vaidyanathan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Karthikeyan_Vaidyanathan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Enterprise_Software_Development"/>
+        <iiitb:id>FC16</iiitb:id>
+        <iiitb:name>Karthikeyan Vaidyanathan</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Kurian_Polachan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Kurian_Polachan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#HealthCare_Application_Development"/>
+        <iiitb:id>FC17</iiitb:id>
+        <iiitb:name>Kurian Polachan</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Machine_Learning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Machine_Learning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS003</iiitb:id>
+        <iiitb:name>Machine Learning</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Madhav_Rao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Madhav_Rao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#NoSQL"/>
+        <iiitb:id>FC18</iiitb:id>
+        <iiitb:name>Madhav Rao</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Manikandan_R_R -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Manikandan_R_R">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Multi-Agent_Systems"/>
+        <iiitb:id>FC19</iiitb:id>
+        <iiitb:name>Manikandan R R</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Maths_for_Machine_Learning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Maths_for_Machine_Learning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS004</iiitb:id>
+        <iiitb:name>Mathematics for Machine Learning</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed-Signal_Embedded_Systems_Design -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed-Signal_Embedded_Systems_Design">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>VL 863</iiitb:id>
+        <iiitb:name>Mixed-Signal Embedded Systems Design</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed_Signal_Design_of_ASICs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Mixed_Signal_Design_of_ASICs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>VL 862</iiitb:id>
+        <iiitb:name>Mixed Signal Design of ASICs</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Multi-Agent_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Multi-Agent_Systems">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>AI 704</iiitb:id>
+        <iiitb:name>Multi-Agent Systems</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Natural_Language_Processing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Natural_Language_Processing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>AI 829</iiitb:id>
+        <iiitb:name>Natural Language Processing</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#NoSQL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#NoSQL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS010</iiitb:id>
+        <iiitb:name>No SQL</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Raghuram_Bharadwaj -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Raghuram_Bharadwaj">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Systems"/>
+        <iiitb:id>FC21</iiitb:id>
+        <iiitb:name>Raghuram Bharadwaj</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Recommendation_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Recommendation_Systems">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>AI 705</iiitb:id>
+        <iiitb:name>Recommendation Systems</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Reinforcement_Learning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Reinforcement_Learning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>AI 832</iiitb:id>
+        <iiitb:name>Reinforcement Learning</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Shrisha_Rao -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Shrisha_Rao">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Algorithms"/>
+        <iiitb:id>FC22</iiitb:id>
+        <iiitb:name>Shrisha Rao</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Production_Engineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Production_Engineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS005</iiitb:id>
+        <iiitb:name>Software Production Engineering</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Software_Systems">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</iiitb:credits>
+        <iiitb:id>CS007</iiitb:id>
+        <iiitb:name>Software Systems</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Srinath_Srinivasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Srinath_Srinivasa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Multi-Agent_Systems"/>
+        <iiitb:id>FC23</iiitb:id>
+        <iiitb:name>Srinath Srinivasa</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Subir_Kumar_Roy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Subir_Kumar_Roy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Foundations_of_AI"/>
+        <iiitb:id>FC24</iiitb:id>
+        <iiitb:name>Subir Kumar Roy</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Sujit_Kumar_Chakrabarti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Sujit_Kumar_Chakrabarti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Compilers"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#NoSQL"/>
+        <iiitb:id>FC25</iiitb:id>
+        <iiitb:name>Sujit Kumar Chakrabarti</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#T_K_Srikanth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#T_K_Srikanth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Enterprise_Software_Development"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#HealthCare_Application_Development"/>
+        <iiitb:id>FC26</iiitb:id>
+        <iiitb:name>T K Srikanth</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Uttam_Kumar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Uttam_Kumar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Few-Shot_Learning"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Foundations_of_AI"/>
+        <iiitb:id>FC27</iiitb:id>
+        <iiitb:name>Uttam Kumar</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#VLSI_Architecture_Design -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#VLSI_Architecture_Design">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#ECE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>VL 731</iiitb:id>
+        <iiitb:name>VLSI Architecture Design</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#V_N_Muralidhara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#V_N_Muralidhara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Algorithms"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Compilers"/>
+        <iiitb:id>FC28</iiitb:id>
+        <iiitb:name>V N Muralidhara</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#V_Ramasubramanian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#V_Ramasubramanian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Machine_Learning"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Maths_for_Machine_Learning"/>
+        <iiitb:id>FC29</iiitb:id>
+        <iiitb:name>V Ramasubramanian</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Vinu_E_Venugopal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Vinu_E_Venugopal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Geographic_Information_Systems"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#NoSQL"/>
+        <iiitb:id>FC30</iiitb:id>
+        <iiitb:name>Vinu E Venugopal</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Visual_Recognition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Visual_Recognition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#CSE"/>
+        <iiitb:credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</iiitb:credits>
+        <iiitb:id>CS012</iiitb:id>
+        <iiitb:name>Visual Recognition</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Viswanath_Gopalakrishnan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Viswanath_Gopalakrishnan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Recommendation_Systems"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Reinforcement_Learning"/>
+        <iiitb:id>FC31</iiitb:id>
+        <iiitb:name>Viswanath Gopalakrishnan</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Vivek_Yadav -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Vivek_Yadav">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Multi-Agent_Systems"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Natural_Language_Processing"/>
+        <iiitb:id>FC32</iiitb:id>
+        <iiitb:name>Vivek Yadav</iiitb:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Meenakshi_D&apos;Souza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Meenakshi_D&apos;Souza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#faculty"/>
+        <iiitb:teaches rdf:resource="http://www.semanticweb.org/budcoded/ontologies/university/iiitb#Compilers"/>
+        <iiitb:id>FC20</iiitb:id>
+        <iiitb:name>Meenakshi D&apos;Souza</iiitb:name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

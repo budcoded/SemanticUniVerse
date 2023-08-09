@@ -10,7 +10,7 @@ function Content({ option }) {
 
   useEffect(() => {
     async function fetchData() {
-      const courseResponse = await axios.post('http://localhost:3030/university_combined/query', null, {
+      const courseResponse = await axios.post('http://localhost:3030/semantic_universe/query', null, {
         headers: {},
         params: {
           query: `PREFIX table: <http://www.semanticweb.org/budcoded/ontologies/university/all#>
@@ -23,7 +23,7 @@ function Content({ option }) {
         }
       });
 
-      const facultyResponse = await axios.post('http://localhost:3030/university_combined/query', null, {
+      const facultyResponse = await axios.post('http://localhost:3030/semantic_universe/query', null, {
         headers: {},
         params: {
           query: `PREFIX table: <http://www.semanticweb.org/budcoded/ontologies/university/all#>
@@ -35,7 +35,7 @@ function Content({ option }) {
         }
       });
 
-      const studentResponse = await axios.post('http://localhost:3030/university_combined/query', null, {
+      const studentResponse = await axios.post('http://localhost:3030/semantic_universe/query', null, {
         headers: {},
         params: {
           query: `PREFIX table: <http://www.semanticweb.org/budcoded/ontologies/university/all#>

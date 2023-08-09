@@ -1,0 +1,1092 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/vipul/ontologies/2023/1/IIIT_Hyderabad"
+     xml:base="http://www.semanticweb.org/vipul/ontologies/2023/1/IIIT_Hyderabad"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:iiitd="http://www.semanticweb.org/vipul/ontologies/university/iiitd#"
+     xmlns:iiith="http://www.semanticweb.org/vipul/ontologies/university/iiith#"
+     xmlns:IIIT_Hyderabad="http://www.semanticweb.org/vipul/ontologies/2023/1/IIIT_Hyderabad#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#admits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#admits">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#admitted_by"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#admitted_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#admitted_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#enrolled_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#enrolled_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#enrolls"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#enrolls -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#enrolls">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#hired_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#hired_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#hires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#hires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#hires">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#taught_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#taught_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#teaches"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#teaches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#teaches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Person"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#cgpa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#cgpa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#contact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#contact">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Person"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#course_credits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#course_credits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#id">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#qualification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#qualification">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Programme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Btech"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mtech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Programme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Programme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Programme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#University -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Algorithms -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Algorithms">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Advance Algorithms</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_COA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_COA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Advance Computer Organization and Architecture</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Computer_Networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Computer_Networks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Advance Computer Networks</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Wireless_Communication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Wireless_Communication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Advance Wireless Communication</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Akash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Akash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Algorithms"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Algorithms"/>
+        <iiitd:address>Bhopal</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">akash</iiitd:contact>
+        <iiitd:id>BT2015003</iiitd:id>
+        <iiitd:name>akash</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Algorithms -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Algorithms">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Algorithms</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Analog_Circuit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Analog_Circuit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Analog Circuits</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Angshul_Majumdar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Angshul_Majumdar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Analog_Circuit"/>
+        <iiitd:address>International Institute of Information Technology
+Gachibowli
+Hyderabad - 500 032
+India</iiitd:address>
+        <iiitd:contact xml:lang="iiith.ac.in">aakansha.natani</iiitd:contact>
+        <iiitd:qualification>PHD from Jawaharlal Nehru University</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Ankit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Ankit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Analog_Circuit"/>
+        <iiitd:address>Rajkot</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">ankit</iiitd:contact>
+        <iiitd:id>MT2022003</iiitd:id>
+        <iiitd:name>ankit</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Arani_Bhattacharya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Arani_Bhattacharya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Algorithms"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Algorithms"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">arani_bhattacharya</iiitd:contact>
+        <iiitd:qualification>PHD from IMperial College London</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Arun_Balaji_Buduru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Arun_Balaji_Buduru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_COA"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Computer_Organization_and_Architecture"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">arun.buduru</iiitd:contact>
+        <iiitd:qualification>PHD from IIT Kharagpur</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Asmita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Asmita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Database_Management_System"/>
+        <iiitd:address>Delhi</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.95</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">asmita</iiitd:contact>
+        <iiitd:id>BT2015001</iiitd:id>
+        <iiitd:name>Asmita</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Bapi_Chhaterjee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Bapi_Chhaterjee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Computer_Networks"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Computer_Networks"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">bapi.chhaterjee</iiitd:contact>
+        <iiitd:qualification>PHD from IIT Bombay</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Compilers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Compilers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Compiler Design</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Computer_Networks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Computer_Networks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Computer Networks</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Computer_Organization_and_Architecture -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Computer_Organization_and_Architecture">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Computer Organization and Architecture</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Control_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Control_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Control Systems</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Modeling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Modeling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Data Modeling</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Structures -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Structures">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Data Strucutres</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Database_Management_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Database_Management_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Database Management System</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Debajyoti_Bera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Debajyoti_Bera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Compilers"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Theory_of_Computation"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">debajyoti.bera</iiitd:contact>
+        <iiitd:qualification>PHD from INRIA Rhone-Alpes, France</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Debaraka_Sengupta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Debaraka_Sengupta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Control_System"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">debaraka.sengupta</iiitd:contact>
+        <iiitd:qualification>PHD from University of Texas, Arlington</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Deepak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Deepak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Control_System"/>
+        <iiitd:address>Jaipur</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">deepak</iiitd:contact>
+        <iiitd:id>MT2022102</iiitd:id>
+        <iiitd:name>deepak</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Dhruv_Kumar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Dhruv_Kumar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Database_Management_System"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">dhruv.kumar</iiitd:contact>
+        <iiitd:qualification>PHD from Tata Institute of Fundamental Research, Mumbai</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Digital_Circuit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Digital_Circuit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Digital Circuits</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Digital_Logic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Digital_Logic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Digital Logic</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Diptapariyo_Majumdar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Diptapariyo_Majumdar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Digital_Circuit"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">diptapariyo.majumdar</iiitd:contact>
+        <iiitd:qualification>PHD from Princeton University USA</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Electronic_Device_and_Circuits -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Electronic_Device_and_Circuits">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Electronic Device and Circuits</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Gaurav -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Gaurav">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_COA"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Computer_Networks"/>
+        <iiitd:address>Chhatrapati Sambhaji Nagar</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">gaurav</iiitd:contact>
+        <iiitd:id>BT2015003</iiitd:id>
+        <iiitd:name>Gaurav</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#IIIT_Delhi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#IIIT_Delhi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#University"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Akash"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Ankit"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Asmita"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Deepak"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Gaurav"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Kshitija"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Monu"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Nivedita"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Samiksha"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Shrikant"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Sukrut"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Swaroop"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Swati"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Tarun"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Tusharika"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vikranth"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vipul"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vishal"/>
+        <iiitd:admits rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Yaman"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Angshul_Majumdar"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Arani_Bhattacharya"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Arun_Balaji_Buduru"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Bapi_Chhaterjee"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Debajyoti_Bera"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Debaraka_Sengupta"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Dhruv_Kumar"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Diptapariyo_Majumdar"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Jainendra_Shukla"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mukesh_Mohania"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mukulika_Maity"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Ojaswa_Sharma"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Piyush_Kedia"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Rajiv_Raman"/>
+        <iiitd:hires rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Rinku_Shah"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact>+91-011-71985300, +91-011-26907400-7404 (5 lines)</iiitd:contact>
+        <iiitd:name>Indrapastha Institute of Information Technology, Delhi</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Jainendra_Shukla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Jainendra_Shukla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Wireless_Communication"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Digital_Logic"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Wireless_Communication"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">jainendra.shukla</iiitd:contact>
+        <iiitd:qualification>PHD from Aarhus University, Denmark</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Kshitija -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Kshitija">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Advance_Wireless_Communication"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Computer_Networks"/>
+        <iiitd:address>Thane</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.15</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiith.ac.in">kshitija.shah</iiitd:contact>
+        <iiitd:id>BT2015005</iiitd:id>
+        <iiitd:name>Kshitija</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Monu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Monu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Compilers"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Computer_Organization_and_Architecture"/>
+        <iiitd:address>Amravati</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.6</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">monu</iiitd:contact>
+        <iiitd:id>BT2015102</iiitd:id>
+        <iiitd:name>monu</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mukesh_Mohania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mukesh_Mohania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Modeling"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact>PHD from IIIT Hyderabad</iiitd:contact>
+        <iiitd:contact xml:lang="iiitd.ac.in">mukesh.mohania</iiitd:contact>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mukulika_Maity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Mukulika_Maity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Structures"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operation_Research_and_Management"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">mukulika.maity</iiitd:contact>
+        <iiitd:qualification>PHD from University of Western Ontario, Canada</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Nivedita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Nivedita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Database_Management_System"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Digital_Circuit"/>
+        <iiitd:id>BT2015004</iiitd:id>
+        <iiitd:name>nivedita</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Ojaswa_Sharma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Ojaswa_Sharma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operating_System"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Systems"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">ojaswa.sharma</iiitd:contact>
+        <iiitd:qualification>PHD from INRIA France</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operating_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operating_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Operating System</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operation_Research_and_Management -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operation_Research_and_Management">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:name>Operation Research and Management</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Piyush_Kedia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Piyush_Kedia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Engineering"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">piyush.kedia</iiitd:contact>
+        <iiitd:qualification>PHD from IIT Kharagpur</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Rajiv_Raman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Rajiv_Raman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Signals_and_System"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#VLSI"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">rajiv.raman</iiitd:contact>
+        <iiitd:qualification>PHD from University of Jyväskylä, Finland</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Rinku_Shah -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Rinku_Shah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Faculty"/>
+        <iiitd:teaches rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operation_Research_and_Management"/>
+        <iiitd:address>Indraprastha Institute of Information Technology
+Delhi Okhla Industrial Estate, Phase III
+(Near Govind Puri Metro Station)
+New Delhi, India - 110020</iiitd:address>
+        <iiitd:contact xml:lang="iiitd.ac.in">rinku.shah</iiitd:contact>
+        <iiitd:qualification>PHD from JNU DELHI</iiitd:qualification>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Samiksha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Samiksha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Modeling"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Digital_Logic"/>
+        <iiitd:address>Mumbai</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</iiitd:cgpa>
+        <iiitd:id>BT2015002</iiitd:id>
+        <iiitd:id xml:lang="iiitd.ac.in">samiksha</iiitd:id>
+        <iiitd:name>samiksha</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Shrikant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Shrikant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Structures"/>
+        <iiitd:address>Bhopal</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.02</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">shrikant</iiitd:contact>
+        <iiitd:id>BT2015101</iiitd:id>
+        <iiitd:name>shrikant</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Signals_and_System -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Signals_and_System">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Signals and Systems</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Engineering -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Engineering">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:name>Software Engineering</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Systems -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Systems">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:name>System Software</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Sukrut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Sukrut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Electronic_Device_and_Circuits"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operation_Research_and_Management"/>
+        <iiitd:address>Nagpur</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.3</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiith.ac.in">sukrut</iiitd:contact>
+        <iiitd:id>BT2015104</iiitd:id>
+        <iiitd:name>Sukrut</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Swaroop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Swaroop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Operating_System"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Engineering"/>
+        <iiitd:address>Bhosari</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.02</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">swaroop</iiitd:contact>
+        <iiitd:id>MT2022105</iiitd:id>
+        <iiitd:name>swaroop</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Swati -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Swati">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Signals_and_System"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Systems"/>
+        <iiitd:address>Noida</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.7</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">swati</iiitd:contact>
+        <iiitd:id>MT2022101</iiitd:id>
+        <iiitd:name>swati</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Tarun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Tarun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Systems"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Theory_of_Computation"/>
+        <iiitd:address>Gwalior</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">tarun</iiitd:contact>
+        <iiitd:id>MT2022004</iiitd:id>
+        <iiitd:name>Tarun</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Theory_of_Computation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Theory_of_Computation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#CSE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Thoery of Computation</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Tusharika -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Tusharika">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#VLSI"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Wireless_Communication"/>
+        <iiitd:address>Meerut</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">tusharika</iiitd:contact>
+        <iiitd:id>MT2022104</iiitd:id>
+        <iiitd:name>Tusharika</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#VLSI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#VLSI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>VLSI</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vikranth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vikranth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#VLSI"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Wireless_Communication"/>
+        <iiitd:address>Meerut</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">vikranth</iiitd:contact>
+        <iiitd:id>MT2022005</iiitd:id>
+        <iiitd:name>vikranth</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vipul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vipul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Modeling"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Software_Engineering"/>
+        <iiitd:address>Amravati</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.20</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiith.ac.in">vipul.ahuja</iiitd:contact>
+        <iiitd:id>MT2022001</iiitd:id>
+        <iiitd:name>Vipul</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vishal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Vishal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Algorithms"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Data_Structures"/>
+        <iiitd:address>Junagarh</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.9</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">vishal</iiitd:contact>
+        <iiitd:id>MT2022002</iiitd:id>
+        <iiitd:name>vishal</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Wireless_Communication -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Wireless_Communication">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#ECE"/>
+        <iiitd:course_credits rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</iiitd:course_credits>
+        <iiitd:name>Wireless Communication</iiitd:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/vipul/ontologies/university/iiitd#Yaman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Yaman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Student"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#Signals_and_System"/>
+        <iiitd:enrolls rdf:resource="http://www.semanticweb.org/vipul/ontologies/university/iiitd#VLSI"/>
+        <iiitd:address>Pune</iiitd:address>
+        <iiitd:cgpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.3</iiitd:cgpa>
+        <iiitd:contact xml:lang="iiitd.ac.in">yaman</iiitd:contact>
+        <iiitd:id>BT2015105</iiitd:id>
+        <iiitd:name>yaman</iiitd:name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
